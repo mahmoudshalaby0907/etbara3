@@ -1,0 +1,57 @@
+🌐 Fapp Web App - No Download Required! 🌐
+
+🎉 YOUR FLUTTER APP IS NOW AVAILABLE ONLINE!
+
+📱 WEB APP ACCESS:
+Landing Page: http://10.154.1.102:8000/web_app_landing.html
+Direct App: http://10.154.1.102:8000/web_app/
+QR Code: fapp_web_qr.png
+
+✅ ADVANTAGES OF WEB VERSION:
+• No downloads required
+• Works on any device (phone, tablet, computer)
+• Instant access via QR code
+• All features available
+• Data persists in browser
+• Perfect for demos and testing
+• Share with anyone easily
+
+📋 HOW TO USE:
+1. Scan the QR code with any device
+2. Landing page opens with app preview
+3. Click "Open Web App" to launch the full app
+4. Use all features normally
+5. Data saves locally in browser
+
+🎯 AVAILABLE FEATURES:
+✅ User registration and login
+✅ Browse volunteer events
+✅ Browse donation projects
+✅ Create new events and projects
+✅ Track your activities
+✅ Filter events by location
+✅ Professional UI design
+✅ Local database storage
+
+📊 COMPARISON:
+
+APK Version:
+• Download required (25.7 MB)
+• Android only
+• Full native performance
+• Install on device
+
+Web Version:
+• No download required
+• Any device with browser
+• Works everywhere
+• Instant access
+
+🚀 PERFECT FOR:
+• Demos and presentations
+• Quick testing
+• Sharing with clients
+• Cross-platform access
+• No installation barriers
+
+🎉 READY TO SHARE! 🎉 
