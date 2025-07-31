@@ -2983,24 +2983,32 @@ class _ChooseOptionScreenState extends State<ChooseOptionScreen> {
                 ),
               ),
               SizedBox(height: 18),
-              Text(
-                title,
-                style: TextStyle(
-                  fontSize: 19,
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.textDark,
+              Flexible(
+                child: Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: 19,
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.textDark,
+                  ),
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
                 ),
-                textAlign: TextAlign.center,
               ),
               SizedBox(height: 5),
-              Text(
-                subtitle,
-                style: TextStyle(
-                  fontSize: 14,
-                  color: AppColors.textLight,
-                  fontWeight: FontWeight.w500,
+              Flexible(
+                child: Text(
+                  subtitle,
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: AppColors.textLight,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
                 ),
-                textAlign: TextAlign.center,
               ),
             ],
           ),
@@ -3134,7 +3142,12 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
                           _selectedIndex = 0;
                         });
                       },
-                      child: Text('Donations', style: TextStyle(fontWeight: FontWeight.w500)),
+                      child: Text(
+                        'Donations', 
+                        style: TextStyle(fontWeight: FontWeight.w500),
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                      ),
                     ),
                   ),
                   SizedBox(width: 8),
@@ -3151,7 +3164,12 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
                           _selectedIndex = 1;
                         });
                       },
-                      child: Text('Events', style: TextStyle(fontWeight: FontWeight.w500)),
+                      child: Text(
+                        'Events', 
+                        style: TextStyle(fontWeight: FontWeight.w500),
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                      ),
                     ),
                   ),
                   SizedBox(width: 8),
@@ -3168,7 +3186,12 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
                           _selectedIndex = 2;
                         });
                       },
-                      child: Text('Projects', style: TextStyle(fontWeight: FontWeight.w500)),
+                      child: Text(
+                        'Projects', 
+                        style: TextStyle(fontWeight: FontWeight.w500),
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                      ),
                     ),
                   ),
                 ],
