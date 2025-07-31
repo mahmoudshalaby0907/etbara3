@@ -2966,27 +2966,27 @@ class _ChooseOptionScreenState extends State<ChooseOptionScreen> {
           ],
         ),
         child: Padding(
-          padding: EdgeInsets.all(16),
+          padding: EdgeInsets.all(14),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
             Container(
-                padding: EdgeInsets.all(12),
+                padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: AppColors.primaryGreen.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 child: Icon(
                   icon,
-                  size: 28,
+                  size: 24,
                   color: AppColors.primaryGreen,
                 ),
               ),
-              SizedBox(height: 12),
+              SizedBox(height: 10),
               Text(
                 title,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 15,
                   fontWeight: FontWeight.w600,
                   color: AppColors.textDark,
                 ),
@@ -2994,11 +2994,11 @@ class _ChooseOptionScreenState extends State<ChooseOptionScreen> {
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,
               ),
-              SizedBox(height: 4),
+              SizedBox(height: 3),
               Text(
                 subtitle,
                 style: TextStyle(
-                  fontSize: 12,
+                  fontSize: 11,
                   color: AppColors.textLight,
                   fontWeight: FontWeight.w500,
                 ),
