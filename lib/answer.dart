@@ -3140,7 +3140,10 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
                       },
                       child: Text(
                         'Donations', 
-                        style: TextStyle(fontWeight: FontWeight.w500),
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 13,
+                        ),
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
                       ),
@@ -3162,7 +3165,10 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
                       },
                       child: Text(
                         'Events', 
-                        style: TextStyle(fontWeight: FontWeight.w500),
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 13,
+                        ),
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
                       ),
@@ -3184,7 +3190,10 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
                       },
                       child: Text(
                         'Projects', 
-                        style: TextStyle(fontWeight: FontWeight.w500),
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 13,
+                        ),
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
                       ),
