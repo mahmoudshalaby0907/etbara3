@@ -52,6 +52,23 @@
             opacity: 0.9;
         }
         
+        .platform-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+        }
+        
+        .platform-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
         .download-btn {
             background: #4CAF50;
             color: white;
@@ -61,7 +78,7 @@
             font-size: 1.1em;
             font-weight: bold;
             cursor: pointer;
-            margin: 20px 0;
+            margin: 10px 0;
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
@@ -71,6 +88,22 @@
             background: #45a049;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .download-btn.ios {
+            background: #007AFF;
+        }
+        
+        .download-btn.ios:hover {
+            background: #0056CC;
+        }
+        
+        .download-btn.web {
+            background: #FF6B35;
+        }
+        
+        .download-btn.web:hover {
+            background: #E55A2B;
         }
         
         .instructions {
@@ -125,6 +158,21 @@
             font-size: 2em;
             margin-bottom: 10px;
         }
+        
+        .device-detect {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -133,27 +181,63 @@
         <h1>Etbara3</h1>
         <p class="subtitle">Your Gateway to Making a Difference</p>
         
-        <a href="app-release.apk" class="download-btn" download>
-            📱 Download Etbara3 App
-        </a>
+        <!-- Android Section -->
+        <div class="platform-section">
+            <div class="platform-title">
+                🤖 Android Users
+            </div>
+            <a href="app-release.apk" class="download-btn" download>
+                📱 Download Android APK
+            </a>
+            <div class="instructions">
+                <h3>📋 Android Installation</h3>
+                <ol>
+                    <li><strong>Download</strong> the APK file above</li>
+                    <li><strong>Enable</strong> "Install from Unknown Sources" in Settings</li>
+                    <li><strong>Open</strong> the downloaded APK file</li>
+                    <li><strong>Install</strong> when prompted</li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- iOS Section -->
+        <div class="platform-section">
+            <div class="platform-title">
+                🍎 iOS Users
+            </div>
+            <a href="https://mahmoudshalaby0907.github.io/etbara3/" class="download-btn ios">
+                🌐 Open Web App
+            </a>
+            <div class="instructions">
+                <h3>📋 iOS Installation</h3>
+                <ol>
+                    <li><strong>Tap</strong> "Open Web App" above</li>
+                    <li><strong>Tap</strong> the Share button (📤) in Safari</li>
+                    <li><strong>Select</strong> "Add to Home Screen"</li>
+                    <li><strong>Tap</strong> "Add" to install</li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- Universal Web App -->
+        <div class="platform-section">
+            <div class="platform-title">
+                🌐 All Devices (Web App)
+            </div>
+            <a href="https://mahmoudshalaby0907.github.io/etbara3/" class="download-btn web">
+                🚀 Launch Web App
+            </a>
+            <p style="margin-top: 10px; opacity: 0.8;">
+                Works on all devices - no installation required!
+            </p>
+        </div>
         
         <div class="qr-section">
             <h3>📱 Scan to Install</h3>
             <div class="qr-code">
                 <div id="qrcode"></div>
             </div>
-            <p>Scan this QR code with your phone to download the app</p>
-        </div>
-        
-        <div class="instructions">
-            <h3>📋 Installation Instructions</h3>
-            <ol>
-                <li><strong>Download</strong> the APK file above</li>
-                <li><strong>Enable</strong> "Install from Unknown Sources" in your phone settings</li>
-                <li><strong>Open</strong> the downloaded APK file</li>
-                <li><strong>Install</strong> the app when prompted</li>
-                <li><strong>Enjoy</strong> using Etbara3!</li>
-            </ol>
+            <p>Scan this QR code with your phone to access the app</p>
         </div>
         
         <div class="features">
@@ -193,6 +277,20 @@
         }, function (error) {
             if (error) console.error(error);
         });
+        
+        // Detect device and show relevant instructions
+        function detectDevice() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            
+            if (/android/i.test(userAgent)) {
+                document.querySelector('.platform-section:nth-child(2)').style.display = 'none';
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                document.querySelector('.platform-section:nth-child(1)').style.display = 'none';
+            }
+        }
+        
+        // Run device detection
+        detectDevice();
     </script>
 </body>
 </html> 
