@@ -4099,7 +4099,9 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
           shadowColor: Colors.transparent,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         ),
-        onPressed: _loginWithFaceID,
+        onPressed: () {
+          // Face ID button is disabled - do nothing when clicked
+        },
         icon: Icon(Icons.face, color: AppColors.primaryGreen, size: 24),
         label: Text(
           'Login with Face ID',
