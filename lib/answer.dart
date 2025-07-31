@@ -2983,32 +2983,28 @@ class _ChooseOptionScreenState extends State<ChooseOptionScreen> {
                 ),
               ),
               SizedBox(height: 18),
-              Flexible(
-                child: Text(
-                  title,
-                  style: TextStyle(
-                    fontSize: 19,
-                    fontWeight: FontWeight.w600,
-                    color: AppColors.textDark,
-                  ),
-                  textAlign: TextAlign.center,
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: 19,
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.textDark,
                 ),
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
               ),
               SizedBox(height: 5),
-              Flexible(
-                child: Text(
-                  subtitle,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: AppColors.textLight,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  textAlign: TextAlign.center,
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
+              Text(
+                subtitle,
+                style: TextStyle(
+                  fontSize: 14,
+                  color: AppColors.textLight,
+                  fontWeight: FontWeight.w500,
                 ),
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
               ),
             ],
           ),
@@ -4392,61 +4388,63 @@ class DonationTypeScreen extends StatelessWidget {
                 
                 // Donation Options
                 Expanded(
-                  child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      _buildDonationCard(
-                        context: context,
-                        icon: Icons.attach_money,
-                        title: 'Money Donation',
-                        subtitle: 'Support causes with financial contribution',
-                        color: AppColors.primaryGreen,
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(builder: (_) => ChooseOrganizationScreen()),
-                          );
-                        },
-                      ),
-                      SizedBox(height: 24),
-                      _buildDonationCard(
-                        context: context,
-                        icon: Icons.checkroom,
-                        title: 'Clothes Donation',
-                        subtitle: 'Donate clothing items for those in need',
-                        color: AppColors.accentGreen,
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(builder: (_) => ClothesDonationScreen()),
-                          );
-                        },
-                      ),
-                      SizedBox(height: 24),
-                      _buildDonationCard(
-                        context: context,
-                        icon: Icons.schedule,
-                        title: 'Donation Plan',
-                        subtitle: 'Set up recurring donations with flexible payment options',
-                        color: AppColors.lightGreen,
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(builder: (_) => DonationPlanScreen()),
-                          );
-                        },
-                      ),
-                      SizedBox(height: 24),
-                      _buildDonationCard(
-                        context: context,
-                        icon: Icons.list_alt,
-                        title: 'My Donation Plans',
-                        subtitle: 'View and manage your recurring donation plans',
-                        color: AppColors.accentGreen,
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(builder: (_) => MyDonationPlansScreen()),
-                          );
-                        },
-                      ),
-                    ],
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        _buildDonationCard(
+                          context: context,
+                          icon: Icons.attach_money,
+                          title: 'Money Donation',
+                          subtitle: 'Support causes with financial contribution',
+                          color: AppColors.primaryGreen,
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(builder: (_) => ChooseOrganizationScreen()),
+                            );
+                          },
+                        ),
+                        SizedBox(height: 24),
+                        _buildDonationCard(
+                          context: context,
+                          icon: Icons.checkroom,
+                          title: 'Clothes Donation',
+                          subtitle: 'Donate clothing items for those in need',
+                          color: AppColors.accentGreen,
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(builder: (_) => ClothesDonationScreen()),
+                            );
+                          },
+                        ),
+                        SizedBox(height: 24),
+                        _buildDonationCard(
+                          context: context,
+                          icon: Icons.schedule,
+                          title: 'Donation Plan',
+                          subtitle: 'Set up recurring donations with flexible payment options',
+                          color: AppColors.lightGreen,
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(builder: (_) => DonationPlanScreen()),
+                            );
+                          },
+                        ),
+                        SizedBox(height: 24),
+                        _buildDonationCard(
+                          context: context,
+                          icon: Icons.list_alt,
+                          title: 'My Donation Plans',
+                          subtitle: 'View and manage your recurring donation plans',
+                          color: AppColors.accentGreen,
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(builder: (_) => MyDonationPlansScreen()),
+                            );
+                          },
+                        ),
+                        SizedBox(height: 24), // Add bottom padding for scrolling
+                      ],
+                    ),
                   ),
                 ),
               ],
